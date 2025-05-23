@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Tuni</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0fdf5;
+    }
+
+    .container {
+      max-width: 1100px;
+      
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1c7d5a;
+      margin-bottom: 40px;
+    }
+
+    .places-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: #1f6750;
+    }
+
+    .card-content p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      background-color: #1c7d5a;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .back-link a:hover {
+      background-color: #28a170;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><i>Nearby Attractions – Must Visit Places</i></h1>
+
+    <div class="places-grid">
+
+      <!-- Dwarapudi Temple -->
+      <div class="card">
+        <img src="https://www.hindutourism.com/udsource/TitleImg/3009151012Talupulamma-Thalli-temple-view.jpg" alt="Dwarapudi Temple">
+        <div class="card-content">
+          <h3>Thalupulamma Talli Temple</h3>
+          <p align="justify">The Sri Talupulamma Ammavari Temple in Lova, commonly known as Thalupulamma Lova, is a Hindu temple in Lova, East Godavari district, Andhra Pradesh, India. </p>
+        </div>
+      </div>
+
+      <!-- Annavaram Temple -->
+      <div class="card">
+        <img src="https://annavaramdevasthanam.nic.in/imgs/history.jpg" alt="Annavaram Temple">
+        <div class="card-content">
+          <h3>Annavaram Satyanarayana Temple</h3>
+          <p align="justify">Located on Ratnagiri Hill, this sacred temple offers divine blessings and panoramic views of the lush Godavari valley.</p>
+        </div>
+      </div>
+
+      <!-- Mango Orchards -->
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/91z994-HAML.jpg" alt="Mango Orchards Tuni">
+        <div class="card-content">
+          <h3>Mango Orchards</h3>
+          <p align="justify">Tuni is famous for its mango production. The orchards offer a scenic retreat during the summer and are vital to the local economy.</p>
+        </div>
+      </div>
+
+      <!-- Vakalapudi Beach -->
+      <div class="card">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1f/96/b0/51/caption.jpg?w=1200&h=-1&s=1" alt="Vakalapudi Beach">
+        <div class="card-content">
+          <h3>Vakalapudi Beach</h3>
+          <p align="justify">Just a short drive from Tuni, this tranquil beach offers a perfect escape with its gentle waves, golden sands, and peaceful surroundings.</p>
+        </div>
+      </div>
+      <!-- Vakalapudi Beach -->
+      <div class="card">
+        <img src="https://static2.tripoto.com/media/filter/tst/img/1400051/SpotDocument/1561819157_1561819011211.jpg.webp" alt="Vakalapudi Beach">
+        <div class="card-content">
+          <h3>Addaripeta Beach</h3>
+          <p align="justify">Addharipeta beach bridge is one of the best attractions near to kakinada samart city. There are more beautiful places located in and around kakinada smart city.</p>
+        </div>
+      </div>
+
+      <!-- Local Culture -->
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjEPbiPiSGlr2ysvhmjwswQCxLIJ6uFG60Jw&s" alt="Tuni Culture">
+        <div class="card-content">
+          <h3>Local Attractions</h3>
+          <p align="justify">Explore the local attractions like parks and xperience vibrant local festivals like Sankranti and Ugadi, featuring traditional food, decorations, and community celebrations.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="back-link">
+      <a href="First Task.html">← Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

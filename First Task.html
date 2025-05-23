@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tuni – The Mango City</title>
+  <style>
+   
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+   
+       body {
+  background-color: #e6fbee; /* light earthy tone */
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+  /* Container for dropdown */
+    .dropdown {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    /* Dropdown button */
+    .dropdown-btn {
+      background-color: #238d62;
+      color: white;
+      padding: 10px 16px;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* Hidden dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    /* Show when class is added */
+    .dropdown-content.show {
+      display: block;
+    }
+
+    /* Links inside dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+   
+     .navbar {
+  background: #458969; /* Deep slate green */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 45px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 650;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.navbar a:hover {
+  background: #b2fad0;
+  color: #2f4f4f;
+}
+
+    .dropdown {
+      position: relative;
+    }
+    .Head
+{
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 0 20px;
+      color: #208354 ;
+      text-shadow: 0 6px 14px #68d8a4 ;;
+      text-align: center;
+}
+.Head p{
+      font-size: 1.1rem;
+      color: #555;
+      font-style: oblique
+      line-height: 2;
+      margin-bottom: 10px;
+}
+    /* Hero Section */
+    .hero {
+  background: url('Pic.jpg') center center/cover no-repeat;
+  filter: drop-shadow(8px 8px 16px rgba(19, 227, 109, 0.5));
+  height: 90vh;
+  position: relative;
+  width: 1480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #fffbe6;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+
+    /* Section styling */
+    .section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .section h2 {
+      color:  #208354 ;;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .section p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 220px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(255,111,97,0.3);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(255,111,97,0.6);
+    }
+
+    /* Button */
+    .btn {
+      background-color: #208354 ;;
+      border: none;
+      color: white;
+      font-weight: 700;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 15px;
+      box-shadow: 0 4px 8px rgba(255,111,97,0.4);
+    }
+    .btn:hover {
+      background-color:  #50aa80 ;;
+      box-shadow: 0 6px 14px #54c490 ;;
+    }
+
+    /* Footer */
+    .footer {
+      background: #07462e;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 80px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1><i>Tuni City</i></h1>
+  <div>
+    <a href="First Task.html">Home</a>
+      <a href="about.html">About</a>
+    <a href="expl.html">Explore</a>
+  </div>
+</nav>
+
+  <!-- JavaScript to toggle dropdown -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+ window.onclick = function(event) {
+      if (!event.target.matches('.dropdown-btn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          let openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
+  <div class="Head"> 
+  <center> <h1><B><i>WELCOME TO TUNI</i></B></h1>
+            <p ><i>The Land of Mangoes & Culture</i></p></center>
+           </div>
+  <!-- Hero -->
+  <center><section id="home" class="hero">
+  <div class="overlay">
+    
+  </div>
+</section></center>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="1.jpeg" alt="Beach Sunset" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRIiOhMOCp76a3PkF50x6XAWQXUzrPVc1Uw&s" alt="Hills" />
+      <img src="https://i.ytimg.com/vi/zvsN9HpEX-A/maxresdefault.jpg" alt="Railway Station" />
+      <img src="https://media.istockphoto.com/id/185217235/photo/mango-tree.jpg?s=612x612&w=0&k=20&c=Rn5WX6C3YWTMGI33Ttpkttw1YTmKCahrXaf2MoK0Ius=" alt="Mango" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5HHPVLOyYKu_lf8wEJHzKTjhjylhWp44j9g&s" alt="Tandava river" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkHSRhx6214WK0H87WPDgAPgcvWg2gELrqPA&s" alt="Dmart" />
+
+    </div>
+    <button class="btn" onclick="sayHi()"><i>Say Hi!</i></button>
+  </section>
+
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <i>Tuni City | Crafted with ❤️ by Mounika</i>
+  </footer>
+
+  <script>
+    function sayHi() {
+      alert("Welcome to Tuni! Enjoy your visit ❤️");
+    }
+  </script>
+
+</body>
+</html>
